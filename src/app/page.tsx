@@ -10,7 +10,7 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState<any[]>([]);
+  const [todos, setTodos] = useState<{id:string;title:string}[]>([]);
 
   const saveTodo = () => {
     if (todo) {
@@ -21,7 +21,7 @@ export default function Home() {
     }
   };
 
-  function handleTodo(e: any) {
+  function handleTodo(e: React.ChangeEvent<HTMLInputElement>) {
     setTodo(e.target.value);
   }
 
@@ -80,7 +80,7 @@ export default function Home() {
           </ScrollArea>
         </div>
       </div>
-      <div className="mt-2 flex justify-between gap-6">
+      <div className="mt-2 flex justify-between gap-6 items-center">
         <h1>Made by Acaj0</h1>
       <a className="w-7 h-7" href="https://github.com/Acaj0/">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
