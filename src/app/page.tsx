@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="text-black flex-col flex items-center justify-center mt-10">
       <a className="text-6xl italic mb-5">TODO-APP</a>
-      <div className="flex items-top justify-center bg-gray-800/35 text-black rounded-xl w-[400px] h-[600px] ">
+      <div className="flex items-top justify-center bg-gray-800/35 text-black rounded-xl w-full md:w-[400px] h-[600px] ">
         <div className="flex flex-col items-center">
           <h1 className="mt-4">Add new TODO</h1>
           <input
