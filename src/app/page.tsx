@@ -10,12 +10,13 @@ export default function Home() {
       const newTodo = { id: new Date().getTime().toString(), title: todo };
       setTodos([...todos, newTodo]);
       localStorage.setItem("localSaves", JSON.stringify([...todos, newTodo]));
+      setTodo("");
     }
   };
 
-function handleTodo(e:any){
-  setTodo(e.target.value)
-}
+  function handleTodo(e: any) {
+    setTodo(e.target.value);
+  }
 
   return (
     <div className="text-black flex-col flex items-center justify-center mt-10">
@@ -25,6 +26,8 @@ function handleTodo(e:any){
           <h1 className="mt-4">Add new TODO</h1>
           <input
             placeholder="..."
+            id="input"
+            type="text"
             className="mt-6 h-10 text-black"
             value={todo}
             onChange={(e) => handleTodo(e)}
@@ -37,7 +40,6 @@ function handleTodo(e:any){
             Submit
           </button>
         </div>
-        
       </div>
     </div>
   );
