@@ -7,13 +7,13 @@ This is a simple Todo website built for testing CRUD (Create, Read, Update, Dele
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone <https://github.com/Acaj0/todo-app>
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd todo-website
+    cd todo-app
     ```
 
 3. Install dependencies:
@@ -27,7 +27,7 @@ This is a simple Todo website built for testing CRUD (Create, Read, Update, Dele
 1. Start the development server:
 
     ```bash
-    npm start
+    npm run dev
     ```
 
 2. Open your web browser and go to `http://localhost:300
