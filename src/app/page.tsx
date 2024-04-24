@@ -20,6 +20,12 @@ export default function Home() {
       setTodo("");
     }
   };
+  const handleDelete = (todo:any)=>{
+          const deleted = todos.filter((t)=> t.id !== todo.id)
+          setTodos(deleted)
+          localStorage.setItem("localSaves", JSON.stringify(deleted))
+
+  }
 
   function handleTodo(e: React.ChangeEvent<HTMLInputElement>) {
     setTodo(e.target.value);
@@ -66,7 +72,7 @@ export default function Home() {
                           
                           <button
                             className="mt-2 bg-[#780000] rounded-md px-6 text-white"
-                            /* onClick={() => handleDelete(links)} */
+                            onClick={() => handleDelete(todos)}
                           >
                             DELETE
                           </button>
