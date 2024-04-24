@@ -7,6 +7,8 @@ import {
 } from "@radix-ui/react-accordion";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import React, { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox"
+
 
 export default function Home() {
   const [todo, setTodo] = useState("");
@@ -58,11 +60,13 @@ export default function Home() {
             {todos.map((todos) => (
               <React.Fragment key={todos.id}>
                 <div className="mt-1 text-black gap-2">
+                 
                   <Accordion
                     className="flex flex-row bg-white rounded-lg items-center justify-center p-4 min-w-full"
                     type="single"
                     collapsible
                   >
+                    <Checkbox />
                     <AccordionItem value="item-1">
                       <AccordionTrigger className="rounded-sm px-1">
                         {todos.title}
